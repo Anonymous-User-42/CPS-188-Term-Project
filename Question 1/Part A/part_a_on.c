@@ -1,7 +1,7 @@
 
 
 #include <stdio.h>
-#include <stdlib>
+#include <stdlib.h>
 #include <math.h>
 
 void main(void)
