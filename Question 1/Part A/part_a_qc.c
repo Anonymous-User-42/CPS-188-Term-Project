@@ -6,7 +6,8 @@ int main(void) {
     in = fopen("statscan_diab1etes.txt", "r");
     if (in != NULL)    
      {
-          while ((c = fgetc(in)) != EOF) {
+          while ((c = fgetc(in)) != EOF)  //reads characters from a file until the end of the file is reached, storing each character in the variable 'c'
+          {
             putchar(c);
         }
         fclose(in);
