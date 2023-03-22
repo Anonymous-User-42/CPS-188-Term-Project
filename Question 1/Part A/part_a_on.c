@@ -4,24 +4,32 @@
 #include <stdlib.h>
 #include <math.h>
 
+/*  Defining program macros */
+
+#define ARRAY_SIZE 500
+
+/*  Initializing UDF's in program use   */
+
 FILE* file_o(void);
 void file_c(FILE* file);
 
-typedef struct datatypes;
+/*typedef struct datatypes;*/
 
 void main(void)
 {
     FILE* f = file_o();
     
-    char string[500];
-    for (int i = 0; i < 10; i++)
+    char string[ARRAY_SIZE];
+    while(!feof(f))
     {
-        fgets(string, 500,f);
+        fgets(string, ARRAY_SIZE,f);
         printf("%s\n", string);
     }
     
     file_c(f);
 }
+
+/*  Defining all subsequent UDF's utilized in the program   */
 
 FILE* file_o(void)   /*  UDF for file opening    */
 {
@@ -42,11 +50,11 @@ void file_c(FILE* file) /*  UDF for file closing    */
     fclose(file);   /*  Closing the already opened file */
 }
 
-typedef struct datatypes
+/*typedef struct datatypes
 {
     int year;
     char province[50];
     char age_group[25];
     char sex[10];
     char values[5];
-};
+};*/
