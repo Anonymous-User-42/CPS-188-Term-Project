@@ -46,5 +46,7 @@ int main() {
 	return(0);
 }
 
+// collect all values in column 14
+// find average of values
 
 
