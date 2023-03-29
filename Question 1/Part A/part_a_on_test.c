@@ -20,12 +20,11 @@ datatypes data_points(FILE* file, datatypes array[LINE_SIZE]);
 
 typedef struct
 {
-    int year;
+    char year[10];
     char province[35];
-    char age_group[15];
+    char age_group[20];
     char sex[10];
-    //  char values[5];
-    int values;
+    char values[5];
 }datatypes;
 
 void main(void)
