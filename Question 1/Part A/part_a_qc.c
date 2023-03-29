@@ -61,4 +61,44 @@ int main() {
     return 0;
 }
 
+//////////////////////////////////////
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(void) {
+    FILE *fp;
+    char line[100];
+    char *token;
+    double sum = 0;
+    int count = 0;
+
+    fp = fopen("statscan_diab1etes.txt", "r");
+    if (fp == NULL) {
+        printf("Error: Could not open the input file.\n");
+        exit(1);
+    }
+
+    while (fgets(line, 100, fp) != NULL) {
+        token = strtok(line, ",");
+        if (strcmp(token, "Quebec") == 0) {
+            token = strtok(NULL, ",");
+            if (*token != '-') {
+                sum += atof(token);
+                count++;
+            }
+        }
+    }
+
+    fclose(fp);
+
+    if (count > 0) {
+        double avg = sum / count;
+        printf("Average for Quebec: %.2lf\n", avg);
+    } else {
+        printf("No data found for Quebec.\n");
+    }
+
+    return 0;
+}
 
