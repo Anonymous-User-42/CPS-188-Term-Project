@@ -1,6 +1,7 @@
 
 
 #include <stdbool.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -16,47 +17,54 @@ typedef struct {
 } datatypes;
 
 void main(void) {
-  FILE *fp;
-  char row[ARRAY_SIZE];
-  char *token;
 
-  fp = fopen("statscan_diabetes.csv", "r");
+  FILE* f = file_o;
 
-  datatypes data_points[ARRAY_SIZE];
+  datatypes data_set[ARRAY_SIZE];
 
+  char line[LINE_SIZE];
+  
   int line_count = 0;
-
-  while (feof(fp) != true) {
-    if (line_count == 0) {
+  int token_count = 0;
+  while (!feof(f))
+  {
+    if (line_count == 1)
+    {
       continue;
-    } else {
-      fgets(row, LINE_SIZE, fp);
     }
-
-    token = strtok(row, ",");
-
-    for (int count; token != NULL; token = strtok(NULL, ","), count++) {
-      if (count == 0) {
-        strcpy(data_points[count].year, token);
-      };
-      if (count == 1) {
-        strcpy(data_points[count].province, token);
-      };
-      if (count == 3) {
-        strcpy(data_points[count].age_group, token);
-      };
-      if (count == 4) {
-        strcpy(data_points[count].sex, token);
-      };
-      if (count == 13) {
-        strcpy(data_points[count].values, token);
-      };
-      token = strtok(NULL, ",");
+    else 
+    {
+      fgets(data_set, LINE_SIZE, f);
+      int token = strtok(data_set, ",");
+      while (token != NULL)
+      {
+        token = strtok(NULL, ",");
+      }
     }
     line_count++;
   }
+  
 
-  for (int i; i <= ARRAY_SIZE; i++) {
-    printf("%s", data_points[i].province);
   }
+
+/*  Defining all subsequent UDF's utilized in the program   */
+
+FILE* file_o(void)   /*  UDF for file opening    */
+{
+    char temp[100];
+    FILE* file; /*  Initializing file storage variable  */
+    file = fopen("statscan_diabetes.csv", "r"); /*  Defining the address path of file to be opened and read    */
+    if (NULL == file)   /*  Fail Safe mechanism for program file opening    */
+    {
+        printf("Error: File Open cannot proceed\n");
+        exit;   /*  Program exits and ends if the fail-safe breaks  */
+    }
+    fscanf(file, "%s", temp);  /*  Scanning the defined file and storing it at address of Var(temp)    */
+    return file;    /*  Returning the file type variable    */
 }
+
+void file_c(FILE* file) /*  UDF for file closing    */
+{
+    fclose(file);   /*  Closing the already opened file */
+}
+
