@@ -23,7 +23,7 @@ int main() {
     double sum_british_columbia = 0;
     double avg_quebec = (sum_quebec / count_quebec);
     double avg_ontario = (sum_ontario / count_ontario);
-    double avg_alberta = (sum_ontario / count_ontario);
+    double avg_alberta = (sum_alberta/ count_alberta);
     double avg_british_columbia = (sum_british_columbia / count_british_columbia);
     double max_avg = 0;
     double lowest_avg = 100;
@@ -134,13 +134,13 @@ else if (max_avg == avg_british_columbia) {
 if (avg_quebec < lowest_avg) {
     lowest_avg = avg_quebec;
 }
-if (avg_alberta > lowest_avg) {
+if (avg_alberta < lowest_avg) {
     lowest_avg = avg_alberta;
 }
-if (avg_ontario > lowest_avg) {
+if (avg_ontario < lowest_avg) {
     lowest_avg = avg_ontario;
 }
-if (avg_british_columbia > lowest_avg) {
+if (avg_british_columbia < lowest_avg) {
     lowest_avg = avg_british_columbia;
 }
 
@@ -159,3 +159,6 @@ else if (lowest_avg == avg_british_columbia) {
     printf("British Columbia has the lowest average value: %.2f\n", lowest_avg);
 }
 }
+
+
+
