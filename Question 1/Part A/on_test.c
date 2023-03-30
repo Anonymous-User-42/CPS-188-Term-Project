@@ -5,8 +5,18 @@
 #include <stdio.h>
 #include <string.h>
 
+/*  Defining program macros */
+
 #define ARRAY_SIZE 500
 #define LINE_SIZE 250
+#define STRING_SIZE 50
+
+/*  Initializing UDF's in program use   */
+
+FILE* file_o(void);
+void file_c(FILE* file);
+
+/*  Initializing struct datatypes for CSV data  */
 
 typedef struct {
   char year[10];
@@ -18,34 +28,62 @@ typedef struct {
 
 void main(void) {
 
-  FILE* f = file_o;
+  FILE* f = file_o();
 
   datatypes data_set[ARRAY_SIZE];
 
-  char line[LINE_SIZE];
+  char line[ARRAY_SIZE];
   
   int line_count = 0;
   int token_count = 0;
-  while (!feof(f))
+  while (feof(f) != true)
   {
-    if (line_count == 1)
-    {
-      continue;
-    }
-    else 
-    {
-      fgets(data_set, LINE_SIZE, f);
-      int token = strtok(data_set, ",");
-      while (token != NULL)
-      {
-        token = strtok(NULL, ",");
-      }
-    }
-    line_count++;
-  }
-  
+      fgets(line, LINE_SIZE, f);
+      line_count++;
+      printf("Row: %s", line);
+      printf("%d\n", line_count);
 
-  }
+      int token_count = 0;
+      char* token = strtok(line, ",");
+      strcpy(data_set[line_count].year, token);
+      token_count++;
+
+      while(token != NULL)
+      {
+        printf("Token: %s\n", token);
+        token = strtok(NULL, ",");
+        token_count++;
+
+        if (token_count == 1)
+        {
+          strcpy(data_set[line_count].province, token);
+        }
+        else if (token_count == 3)
+        {
+          strcpy(data_set[line_count].age_group, token);
+        }
+        else if (token_count == 4)
+        {
+          strcpy(data_set[line_count].sex, token);
+        }
+        else if (token_count == 14)
+        {
+          strcpy(data_set[line_count].values, token);
+        }
+
+      }
+
+      printf("%d\n", token_count);
+    }
+
+    for (int i = 0; i < 220; i++)
+    {
+      printf("%s\n", data_set[i].year);
+    }
+    
+
+  file_c(f);
+}
 
 /*  Defining all subsequent UDF's utilized in the program   */
 
