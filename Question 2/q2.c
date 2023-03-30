@@ -21,10 +21,6 @@ int main() {
     double sum_ontario = 0;
     double sum_alberta = 0;
     double sum_british_columbia = 0;
-    double avg_quebec = (sum_quebec / count_quebec);
-    double avg_ontario = (sum_ontario / count_ontario);
-    double avg_alberta = (sum_alberta/ count_alberta);
-    double avg_british_columbia = (sum_british_columbia / count_british_columbia);
     double max_avg = 0;
     double lowest_avg = 100;
     
@@ -87,78 +83,75 @@ double value = atof(row_tokens[1]); // convert value to double
         }
     }
 
-
 // Calculate and print averages
 
 if (count_quebec > 0) {
-    printf("Average for Quebec: %f\n", avg_quebec);
+    double avg_quebec = sum_quebec / count_quebec;
+    printf("Average for Quebec: %.2f\n", avg_quebec);
 }
 if (count_ontario > 0) {
-    printf("Average for Ontario: %f\n", avg_ontario);
+    double avg_ontario = sum_ontario / count_ontario;
+    printf("Average for Ontario: %.2f\n", avg_ontario);
 }
 if (count_alberta > 0) {
-    printf("Average for Alberta: %f\n", avg_alberta);
+    double avg_alberta = sum_alberta / count_alberta;
+    printf("Average for Alberta: %.2f\n", avg_alberta);
 }
 if (count_british_columbia > 0) {
-    printf("Average for British Columbia: %f\n", avg_british_columbia);
+    double avg_british_columbia = sum_british_columbia / count_british_columbia;
+    printf("Average for British Columbia: %.2f\n", avg_british_columbia);
 }
 
-if (avg_quebec > max_avg) {
-    max_avg = avg_quebec;
+// Calculate and print highest and lowest averages
+
+if ((sum_quebec / count_quebec) > max_avg) {
+    max_avg = (sum_quebec / count_quebec);
 }
-if (avg_alberta > max_avg) {
-    max_avg = avg_alberta;
+if ((sum_alberta / count_alberta) > max_avg) {
+    max_avg = (sum_alberta / count_alberta);
 }
-if (avg_ontario > max_avg) {
-    max_avg = avg_ontario;
+if ((sum_ontario / count_ontario) > max_avg) {
+    max_avg = (sum_ontario / count_ontario);
 }
-if (avg_british_columbia > max_avg) {
-    max_avg = avg_british_columbia;
+if ((sum_british_columbia / count_british_columbia) > max_avg) {
+    max_avg = (sum_british_columbia / count_british_columbia);
 }
 
-if (max_avg == avg_quebec) {
+if (max_avg == (sum_quebec / count_quebec)) {
     printf("Quebec has the highest average value: %.2f\n", max_avg);
-    
 } 
-else if (max_avg == avg_ontario) {
+else if (max_avg == (sum_ontario / count_ontario)) {
     printf("Ontario has the highest average value: %.2f\n", max_avg);
 } 
-else if (max_avg == avg_alberta) {
+else if (max_avg == (sum_alberta / count_alberta)) {
     printf("Alberta has the highest average value: %.2f\n", max_avg);
 } 
-
-else if (max_avg == avg_british_columbia) {
+else if (max_avg == (sum_british_columbia / count_british_columbia)) {
     printf("British Columbia has the highest average value: %.2f\n", max_avg);
 }
 
-if (avg_quebec < lowest_avg) {
-    lowest_avg = avg_quebec;
+if ((sum_quebec / count_quebec) < lowest_avg) {
+    lowest_avg = (sum_quebec / count_quebec);
 }
-if (avg_alberta < lowest_avg) {
-    lowest_avg = avg_alberta;
+if ((sum_alberta / count_alberta) < lowest_avg) {
+    lowest_avg = (sum_alberta / count_alberta);
 }
-if (avg_ontario < lowest_avg) {
-    lowest_avg = avg_ontario;
+if ((sum_ontario / count_ontario) < lowest_avg) {
+    lowest_avg = (sum_ontario / count_ontario);
 }
-if (avg_british_columbia < lowest_avg) {
-    lowest_avg = avg_british_columbia;
+if ((sum_british_columbia / count_british_columbia) < lowest_avg) {
+    lowest_avg = (sum_british_columbia / count_british_columbia);
 }
 
-if (lowest_avg == avg_quebec) {
+
+if (lowest_avg == (sum_quebec / count_quebec)) {
     printf("Quebec has the lowest average value: %.2f\n", lowest_avg);
-    
-} 
-else if (lowest_avg == avg_ontario) {
+} else if (lowest_avg == sum_ontario / count_ontario) {
     printf("Ontario has the lowest average value: %.2f\n", lowest_avg);
-} 
-else if (lowest_avg == avg_alberta) {
+} else if (lowest_avg == (sum_alberta / count_alberta)) {
     printf("Alberta has the lowest average value: %.2f\n", lowest_avg);
-} 
-
-else if (lowest_avg == avg_british_columbia) {
+} else if (lowest_avg == (sum_british_columbia / count_british_columbia)) {
     printf("British Columbia has the lowest average value: %.2f\n", lowest_avg);
 }
 }
-
-
 
