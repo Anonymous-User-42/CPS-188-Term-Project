@@ -20,10 +20,10 @@ void file_c(FILE* file);
 
 typedef struct {
   char year[10];
-  char province[35];
-  char age_group[15];
+  char province[50];
+  char age_group[20];
   char sex[10];
-  char values[5];
+  char values[10];
   char temp_str[10];
 } datatypes;
 
@@ -59,7 +59,7 @@ void main(void) {
       token = strtok(NULL, ",");
       token_count++;
 
-      if (token_count == 1)
+      if (token_count == 2)
       {
         strcpy(data_set[line_count].province, token);
       }
@@ -88,7 +88,8 @@ void main(void) {
 
     for (int i = 0; i < 220; i++)
     {
-      printf("%s", data_set[i].province);
+      double v = atof(data_set[i].values);
+      printf("%.3lf\n", v);
     }
     
 
