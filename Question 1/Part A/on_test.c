@@ -61,7 +61,7 @@ void main(void) {
 
       if (token_count == 2)
       {
-        strcpy(data_set[line_count].province, token);
+        //strcpy(data_set[line_count].province, token);
       }
       else if (token_count == 3)
       {
@@ -88,8 +88,12 @@ void main(void) {
 
     for (int i = 0; i < 220; i++)
     {
-      double v = atof(data_set[i].values);
-      printf("%.3lf\n", v);
+      char tok2[10];
+      char tok3[10];
+      strcpy(tok2, data_set[i].values);
+      strcpy(tok3, &tok2[1]);
+      double v = atof(tok3);
+      printf("%.3lf %s\n", v, data_set[i].values);
     }
     
 
