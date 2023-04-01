@@ -53,39 +53,19 @@ void main(void) {
     strcpy(data_set[line_count].year, token);
     //token_count++;
 
-    while(token != NULL)
+    for (int i = 0; i < 2; i++)
     {
-      //  printf("Token: %s\n", token);
-      token = strtok(NULL, ",");
-      token_count++;
-
-      if (token_count == 1)
+      if (i == 1)
       {
+        token = strtok(NULL, ",");
         strcpy(data_set[line_count].province, token);
       }
-      else if (token_count == 3)
-      {
-        strcpy(data_set[line_count].age_group, token);
-      }
-      else if (token_count == 4)
-      {
-        strcpy(data_set[line_count].sex, token);
-      }
-      else if (token_count == 13)
-      {
-        strcpy(data_set[line_count].values, token);
-      }
-      else if (token_count == 14)
-      {
-        strcpy(data_set[line_count].temp_str, token);
-      }
+    }
+    
       
 
-    }
-
-      //printf("%d\n", token_count);
-    }
-
+    
+  }
     for (int i = 0; i < 220; i++)
     {
       printf("%s", data_set[i].province);
