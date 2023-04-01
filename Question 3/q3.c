@@ -1,83 +1,65 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h> 
+#include <stdlib.h> 
 #include <string.h>
 
-//PARSE THE CSV FILE AND STORE INTO ARRAY of Structs
+int main(void) 
+{    
+	printf("Question 3:\n");
+	
+    int years; 
+    char place[50]; 
+    char ages[50]; 
+    char gender[20];  
+    float percent;  
+    char *sp, *vp; 
 
-typedef struct diabetes
-{
-	char REF_DATE[100];
-	char GEO[100];
-	char Age_Group[100];
-	char Sex[100];
-	char VALUE[100];
-}	dict;
+    char line[900];
+    FILE *fp; 
+    fp= fopen("statscan_diabetes.csv", "r"); 
+     
+    if(fp==NULL){ 
+        printf("Something went wrong\n"); 
+        return 1;
+    } 
 
-int main()
-{
-	FILE *fp = fopen("statscan_diabetes.csv", "r"); //open in read mode 
-	
-	if(!fp	) 
-	{
-		printf("Cannot Open File");
-		return 1;
-	}
-	
-	char buff[1024]; 
-	int row_count = 0;
-	int field_count = 0;
-	
-	dict values[999];
-	
-	int i = 0;
-	while (fgets(buff, 1024, fp))
-	{
-		field_count = 0;
-		row_count++;
-		if(row_count == 1)
-		continue; 
-		
-		char *field = strtok(buff, ",");
-		while(field)
-	{ 
-		if(field_count == 0)
-			strcpy(values[i].REF_DATE, field);	
-		if(field_count == 1)
-			strcpy(values[i].GEO, field);
-		if(field_count == 3)
-			strcpy(values[i].Age_Group, field);
-		if(field_count == 4)
-			strcpy(values[i].Sex, field);
-		if(field_count == 13)
-			strcpy(values[i].VALUE, field);
-			
-		field = strtok(NULL, ",");
-		field_count++;
-	}
-	i++;
-}
-fclose(fp);
+    fgets(line,900,fp); // read and ignore first line
 
-printValues(values);
-	
+    float sum = 0.0;
+    int count = 0;
+    for(int i = 0; i < 42; i++){ 
+        fgets(line, 900, fp); // read next line
+              
+        sp=strtok(line, "\""); 
+        years= atoi(sp); 
+  
+        sp=strtok(NULL, ",");    
+        strcpy(place, sp);   
+ 
+        sp=strtok(NULL, ",");  
+        sp=strtok(NULL, ",");   
+        strcpy(ages,sp); 
+               
+        sp=strtok(NULL, ",");  
+        strcpy(gender,sp); 
+  
+        sp=strtok(NULL, ","); //indicators skipped 
+        sp=strtok(NULL, ","); //Characteristics skipped 
+        sp=strtok(NULL, ","); //UOM skipped 
+        sp=strtok(NULL, ","); //UOM_ID skipped 
+        sp=strtok(NULL, ","); //Scalar Factor skipped 
+        sp=strtok(NULL, ","); //Scalar ID skipped 
+        sp=strtok(NULL, ","); //Vector skipped   
+        sp=strtok(NULL, ","); 
+        sp=strtok(NULL, ","); 
+        vp=strtok(sp, "\"");
+        percent= atof(vp);
 
-		
-	return 0;
-}
+        sum += percent;
+        count++;
+    } 
 
-void printValues(dict values[])
-{
-	
-	for(int i=0; i<42; i++)
-	{
-		printf("Province->%s VALUE->%s\n" ,values[i].GEO, values[i].VALUE);
-	}
-	
-	double sum = 0;
-	
-	for(int i =0; i<42; i++)
-	{
-		sum += atof(values[i].VALUE);
-	}
-	printf("Sum: %lf\n", sum);
+    float average = sum / count;
+    printf("The National average is: %.1f", average);
+
+    return 0;
 }
