@@ -30,7 +30,7 @@ plot "data4a.txt" using 1:2 with lines linestyle 1 linecolor rgb "#E41A1C" title
      "data4a.txt" using 1:5 with lines linestyle 4 linecolor rgb "#984EA3" title "Ontario", \
       "data4a.txt" using 1:6 with lines linestyle 5 linecolor rgb "#FF7F00" title "Quebec"
         
-     
+     graph is in the report 
 
 
 
