@@ -93,8 +93,129 @@ void main(void) {
       strcpy(tok2, data_set[i].values);
       strcpy(tok3, &tok2[1]);
       double v = atof(tok3);
-      printf("%.3lf %s\n", v, data_set[i].values);
+      //printf("%.3lf %s\n", v, data_set[i].values);
     }
+    
+	double sum_2015 = 0, sum_2016 = 0, sum_2017 = 0, sum_2018 = 0, sum_2019 = 0, sum_2020 = 0, sum_2021 = 0;
+	double avg_2015 = 0, avg_2016 = 0, avg_2017 = 0, avg_2018 = 0, avg_2019 = 0, avg_2020 = 0, avg_2021 = 0;
+	int c_2015 = 0, c_2016 = 0, c_2017 = 0, c_2018 = 0, c_2019 = 0, c_2020 = 0, c_2021 = 0;
+
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+		char tok2[10];
+		char tok3[10];
+		strcpy(tok2, data_set[i].year);
+      	strcpy(tok3, &tok2[1]);
+      	double year = atof(tok3);
+		
+		if (strcmp(data_set[i].year,"\"2015\""))
+		{
+			c_2015++;
+			char tok2[10];
+      		char tok3[10];
+      		strcpy(tok2, data_set[i].values);
+      		strcpy(tok3, &tok2[1]);
+      		double v = atof(tok3);
+			if (v == 0)
+			{
+				c_2015--;
+			}
+			
+			sum_2015 += v;
+		}
+		if (year == 2016)
+		{
+			c_2016++;
+			char tok2[10];
+      		char tok3[10];
+      		strcpy(tok2, data_set[i].values);
+      		strcpy(tok3, &tok2[1]);
+      		double v = atof(tok3);
+			if (v == 0)
+			{
+				c_2016--;
+			}
+			
+			sum_2016 += v;
+		}
+		if (year == 2017)
+		{
+			c_2017++;
+			char tok2[10];
+      		char tok3[10];
+      		strcpy(tok2, data_set[i].values);
+      		strcpy(tok3, &tok2[1]);
+      		double v = atof(tok3);
+			if (v == 0)
+			{
+				c_2017--;
+			}
+			
+			sum_2017 += v;
+		}
+		if (year == 2018)
+		{
+			c_2018++;
+			char tok2[10];
+      		char tok3[10];
+      		strcpy(tok2, data_set[i].values);
+      		strcpy(tok3, &tok2[1]);
+      		double v = atof(tok3);
+			if (v == 0)
+			{
+				c_2018--;
+			}
+			
+			sum_2018 += v;
+		}
+		if (year == 2019)
+		{
+			c_2019++;
+			char tok2[10];
+      		char tok3[10];
+      		strcpy(tok2, data_set[i].values);
+      		strcpy(tok3, &tok2[1]);
+      		double v = atof(tok3);
+			if (v == 0)
+			{
+				c_2019--;
+			}
+			
+			sum_2019 += v;
+		}
+		if (year == 2020)
+		{
+			c_2020++;
+			char tok2[10];
+      		char tok3[10];
+      		strcpy(tok2, data_set[i].values);
+      		strcpy(tok3, &tok2[1]);
+      		double v = atof(tok3);
+			if (v == 0)
+			{
+				c_2020--;
+			}
+			
+			sum_2020 += v;
+		}
+		if (year == 2021)
+		{
+			c_2021++;
+			char tok2[10];
+      		char tok3[10];
+      		strcpy(tok2, data_set[i].values);
+      		strcpy(tok3, &tok2[1]);
+      		double v = atof(tok3);
+			if (v == 0)
+			{
+				c_2021--;
+			}
+			
+			sum_2021 += v;
+		}
+		
+		
+    }printf("2015 Average: %.3lf\n", sum_2015 / c_2015);printf("2016 Average: %.3lf\n", sum_2016 / c_2016);printf("2017 Average: %.3lf\n", sum_2017 / c_2017);printf("2018 Average: %.3lf\n", sum_2018 / c_2018);printf("2019 Average: %.3lf\n", sum_2019 / c_2019);printf("2020 Average: %.3lf\n", sum_2020 / c_2020);printf("2021 Average: %.3lf\n", sum_2021 / c_2021);
     
 
   file_c(f);
