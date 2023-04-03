@@ -94,6 +94,8 @@ void main(void)
 
     file_c(f);  /*  Terminating File Operations */
 
+	printf("Note: All Mathematical values and operations are signified and represented as follows in accordance to the percent operater parameter. Please refer to Project documentation for further information.\n");
+
     /*          Question 1          */printf("|------------------------------------------------------------------------------------------Question 1------------------------------------------------------------------------------------------|\n");
 
 	spacer();
@@ -1307,6 +1309,76 @@ void main(void)
 
 	spacer();
 
+	double ProvinceData[4] = {avg_quebec, avg_ontario, avg_alberta, avg_british_columbia};
+
+	float lowest = 0;
+	int l_counter = 0;
+	float highest = 0;
+	int h_counter = 0;
+
+	for (int i = 0; i < 4; i++)
+	{
+		if (i == 0)
+		{
+			lowest = ProvinceData[i];
+			l_counter = i;
+			highest = ProvinceData[i];
+			h_counter = i;
+		}
+		else
+		{
+			if (ProvinceData[i] < lowest)
+			{
+				lowest = ProvinceData[i];
+				l_counter = i;
+			}
+			if (ProvinceData[i] > highest)
+			{
+				highest = ProvinceData[i];
+				h_counter = i;
+			}
+		}
+	}
+
+	if (l_counter == 0)
+	{
+		printf("The Province with the Lowest percentage of Diabetes is Quebec\n");
+	}
+	if (l_counter == 1)
+	{
+		printf("The Province with the Lowest percentage of Diabetes is Ontario\n");
+	}
+	if (l_counter == 2)
+	{
+		printf("The Province with the Lowest percentage of Diabetes is Alberta\n");
+	}
+	if (l_counter == 3)
+	{
+		printf("The Province with the Lowest percentage of Diabetes is British Columbia\n");
+	}
+
+	if (h_counter == 0)
+	{
+		printf("The Province with the Highest percentage of Diabetes is Quebec\n");
+	}
+	if (h_counter == 1)
+	{
+		printf("The Province with the Highest percentage of Diabetes is Ontario\n");
+	}
+	if (h_counter == 2)
+	{
+		printf("The Province with the Highest percentage of Diabetes is Alberta\n");
+	}
+	if (h_counter == 3)
+	{
+		printf("The Province with the Highest percentage of Diabetes is British Columbia\n");
+	}
+	
+	spacer();
+
+	/*          Question 3          */printf("|------------------------------------------------------------------------------------------Question 3------------------------------------------------------------------------------------------|\n");
+
+	spacer();
 
 }
 
