@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.9.13)  3 APR 2023 00:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.9.13)  3 APR 2023 03:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1300,7 +1300,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Undefined control sequence.
 \set@color ...\@pdfcolorstack push{\current@color 
                                                   }\aftergroup \reset@color 
-l.63 \end{titlepage}
+l.65 \end{titlepage}
                     
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1311,7 +1311,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \set@color ...\@pdfcolorstack push{\current@color 
                                                   }\aftergroup \reset@color 
-l.63 \end{titlepage}
+l.65 \end{titlepage}
                     
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1326,32 +1326,32 @@ and I'll forget about whatever was undefined.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 123.
-LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 1
-23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 98.
+LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 9
+8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/cbfonts-fd/lgrcmr.fd
 File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
 )
-LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    ... okay on input line 98.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1375,7 +1375,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 123.
+Package hyperref Info: Link coloring OFF on input line 98.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1388,9 +1388,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count342
 )
-LaTeX Info: Redefining \ref on input line 123.
-LaTeX Info: Redefining \pageref on input line 123.
-LaTeX Info: Redefining \nameref on input line 123.
+LaTeX Info: Redefining \ref on input line 98.
+LaTeX Info: Redefining \pageref on input line 98.
+LaTeX Info: Redefining \nameref on input line 98.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
@@ -1408,17 +1408,17 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.126 
+l.101 
       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 126
+LaTeX Font Info:    Trying to load font information for U+msa on input line 101
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 126
+LaTeX Font Info:    Trying to load font information for U+msb on input line 101
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1431,13 +1431,35 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.126 
+l.101 
        [1]
-Chapter 1.
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <18> not available
-(Font)              size <17.28> substituted on input line 141.
+(Font)              size <17.28> substituted on input line 103.
 
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/it' in size <18> not available
+(Font)              size <17.28> substituted on input line 103.
+
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
+l.103 \tableofcontents
+                      
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+(./main.toc)
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.104 \clearpage
+                 [1]
+Chapter 1.
 (./Sections/Introduction.tex
 Overfull \hbox (4.86118pt too wide) in paragraph at lines 1--2
 \OT1/cmr/m/n/12 prevalence of diabetes in the four most populous provinces of C
@@ -1452,131 +1474,149 @@ n of the provinces
 
 )
 Chapter 2.
-(./Sections/Background Research.tex
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.3 \section{{Problem 1}}
-                         
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
+(./Sections/Background Research.tex [2
 
+]
+<q1_ab.png, id=73, 297.11pt x 128.48pt>
+File: q1_ab.png Graphic file (type png)
+<use q1_ab.png>
+Package pdftex.def Info: q1_ab.png  used on input line 10.
+(pdftex.def)             Requested size: 362.77263pt x 156.88258pt.
 
-LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 3.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.5 	\subsection{{Computer Program}}
-                                    
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 7.
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.10 #
-      include <stdio.h> [1
-
-] [2] [3]
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.126 	\subsection{{Program Output Screenshot}}
-                                               
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-<thr.png, id=188, 805.0075pt x 177.66376pt>
-File: thr.png Graphic file (type png)
-<use thr.png>
-Package pdftex.def Info: thr.png  used on input line 128.
-(pdftex.def)             Requested size: 426.79134pt x 94.19115pt.
-
-Overfull \hbox (36.79134pt too wide) in paragraph at lines 128--129
-[] 
+Overfull \hbox (0.40923pt too wide) in paragraph at lines 13--16
+[]\OT1/cmr/m/n/12 Once the program is executed, it opens the \statscan[]diabete
+s.csv"
  []
 
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.130 \section{{Problem 2}}
-                           
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
 
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.132 		\subsection{{Computer Program}}
-                                       
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
+Underfull \hbox (badness 10000) in paragraph at lines 13--16
 
-[4 <./thr.png>] [5]
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.198 		\subsection{{Program Output Screenshot}}
-                                                
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
+ []
 
-<bmi.png, id=274, 605.26125pt x 83.31125pt>
-File: bmi.png Graphic file (type png)
-<use bmi.png>
-Package pdftex.def Info: bmi.png  used on input line 202.
-(pdftex.def)             Requested size: 362.77263pt x 49.93373pt.
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.205 \section{{Problem 3}}
-                           
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
+[3 <./Q1_ab.png>]
+<q1_c.png, id=83, 1572.87625pt x 198.7425pt>
+File: q1_c.png Graphic file (type png)
+<use q1_c.png>
+Package pdftex.def Info: q1_c.png  used on input line 19.
+(pdftex.def)             Requested size: 483.69684pt x 61.11826pt.
 
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.207 	\subsection{{Computer Program}}
-                                      
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
+Overfull \hbox (93.69684pt too wide) in paragraph at lines 19--20
+[][] 
+ []
 
-[6 <./bmi.png>] [7]
-! Missing number, treated as zero.
-<to be read again> 
-                   p
-l.312 	\subsection{{Program Output Screenshot}}
-                                               
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
 
-<grades.png, id=365, 618.31pt x 472.76625pt>
-File: grades.png Graphic file (type png)
-<use grades.png>
-Package pdftex.def Info: grades.png  used on input line 316.
-(pdftex.def)             Requested size: 362.77263pt x 277.38591pt.
-) [8] [9 <./grades.png>] [10
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
+ []
+
+<Q1_d.png, id=84, 1582.91376pt x 128.48pt>
+File: Q1_d.png Graphic file (type png)
+<use Q1_d.png>
+Package pdftex.def Info: Q1_d.png  used on input line 26.
+(pdftex.def)             Requested size: 483.69684pt x 39.25984pt.
+
+Overfull \hbox (93.69684pt too wide) in paragraph at lines 26--27
+[][] 
+ []
+
+
+Overfull \hbox (5.05696pt too wide) in paragraph at lines 29--30
+[]\OT1/cmr/m/n/12 The program defines several variables to hold the sums and av
+erages
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+[4 <./Q1_c.png> <./Q1_d.png>]
+<Q2.png, id=92, 632.3625pt x 107.40125pt>
+File: Q2.png Graphic file (type png)
+<use Q2.png>
+Package pdftex.def Info: Q2.png  used on input line 34.
+(pdftex.def)             Requested size: 362.77263pt x 61.61429pt.
+
+Overfull \hbox (2.18065pt too wide) in paragraph at lines 38--39
+[]\OT1/cmr/m/n/12 Indicate the provinces that have diabetes percentages above t
+he national
+ []
+
+<Q3.png, id=93, 611.28375pt x 220.825pt>
+File: Q3.png Graphic file (type png)
+<use Q3.png>
+Package pdftex.def Info: Q3.png  used on input line 41.
+(pdftex.def)             Requested size: 362.77263pt x 131.05049pt.
+[5 <./Q2.png> <./Q3.png>]
+<Q4.png, id=103, 1067.99pt x 80.3pt>
+File: Q4.png Graphic file (type png)
+<use Q4.png>
+Package pdftex.def Info: Q4.png  used on input line 48.
+(pdftex.def)             Requested size: 426.79134pt x 32.09001pt.
+
+Overfull \hbox (36.79134pt too wide) in paragraph at lines 48--49
+[][] 
+ []
+
+
+Overfull \hbox (0.4529pt too wide) in paragraph at lines 51--52
+[]\OT1/cmr/m/n/12 Lowest and highest variables are initialized to zero and coun
+ter variables
+ []
+
+)
+Chapter 3.
+(./Sections/Graphs.tex
+<Q5.png, id=104, 602.25pt x 481.8pt>
+File: Q5.png Graphic file (type png)
+<use Q5.png>
+Package pdftex.def Info: Q5.png  used on input line 8.
+(pdftex.def)             Requested size: 362.77263pt x 290.22908pt.
+ [6 <./Q4.png>]
+Overfull \hbox (11.25833pt too wide) in paragraph at lines 11--12
+\OT1/cmr/m/n/12 accurately explains the goal of the chart, which is to display 
+the prevalence
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+[7 <./Q5.png>]
+Overfull \hbox (0.614pt too wide) in paragraph at lines 12--13
+[]\OT1/cmr/m/n/12 Make a graph (bar chart) that shows the average percentages o
+f diabetes
+ []
+
+<Q6.png, id=116, 602.25pt x 481.8pt>
+File: Q6.png Graphic file (type png)
+<use Q6.png>
+Package pdftex.def Info: Q6.png  used on input line 15.
+(pdftex.def)             Requested size: 362.77263pt x 290.22908pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
+
+ []
+
+[8 <./Q6.png>])
+Chapter 4.
+(./Sections/Conclusion.tex) [9] [10
 
 
 
@@ -1586,29 +1626,28 @@ Appendix A.
 ! Missing number, treated as zero.
 <to be read again> 
                    p
-l.5 ...ction{{QQuestions 1, 2, 3 & 4 Source Code}}
+l.5 ...ction{{Questions 1, 2, 3 \& 4 Source Code}}
                                                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-! Misplaced alignment tab character &.
-<argument> {QQuestions 1, 2, 3 &
-                                 4 Source Code}
-l.5 ...ction{{QQuestions 1, 2, 3 & 4 Source Code}}
-                                                  
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
 
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 5.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `alignment tab' on input line 5.
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 7.
+ [11
 
-[11] [12] [13]
+] [12]
+[13]
 Overfull \hbox (203.29889pt too wide) in paragraph at lines 106--108
 [][][][] 
  []
@@ -1669,11 +1708,12 @@ Overfull \hbox (852.19763pt too wide) in paragraph at lines 1532--1533
 [][][][] 
  []
 
-[47]
+
 Overfull \hbox (852.19763pt too wide) in paragraph at lines 1550--1551
 [][][][] 
  []
 
+[47]
 Appendix B.
 ! Missing number, treated as zero.
 <to be read again> 
@@ -1705,26 +1745,26 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 749A4915B6B482EBCD00911DE041CEEF;2229.
+(rerunfilecheck)             Checksum: D896A82CACE4A5DBBE405DDC5443C29B;1074.
  ) 
 Here is how much of TeX's memory you used:
- 40531 strings out of 480129
- 893951 string characters out of 5893409
- 1887802 words of memory out of 5000000
- 55887 multiletter control sequences out of 15000+600000
- 479531 words of font info for 64 fonts, out of 8000000 for 9000
+ 40258 strings out of 480129
+ 889391 string characters out of 5893409
+ 1880229 words of memory out of 5000000
+ 55864 multiletter control sequences out of 15000+600000
+ 486346 words of font info for 89 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 84i,6n,94p,1193b,2032s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,6n,99p,1314b,2032s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (51 pages, 299631 bytes).
+Output written on main.pdf (51 pages, 336704 bytes).
 PDF statistics:
- 2595 PDF objects out of 2984 (max. 8388607)
- 2499 compressed objects within 25 object streams
- 1924 named destinations out of 2073 (max. 500000)
- 156 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2259 PDF objects out of 2487 (max. 8388607)
+ 2156 compressed objects within 22 object streams
+ 1648 named destinations out of 1728 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 

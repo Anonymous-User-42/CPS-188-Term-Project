@@ -29,11 +29,6 @@
 \usepackage[page,title,titletoc]{appendix}
 \usepackage{listingsutf8}
 \usepackage{xpatch}
-%\usepackage{mathptmx}
-%\usepackage{sectsty,lmodern}
-
-
-
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -63,39 +58,19 @@
 
 \lstset{literate={θ}{{$\theta$}}1{ω}{{$\omega$}}1}
 
-
-
-
 \renewcommand{\contentsname}{\textit{Contents}\hline}
-%\renewcommand{\bibname}{\textit{Bibliography}}
-%\renewcommand{\bibname}{\textit{Works Cited}}
 \renewcommand{\bibname}{{Bibliography}}
 \renewcommand{\listfigurename}{\textit{List of Figures}\hline}
 \renewcommand{\listtablename}{\textit{List of Tables}\hline}
-%\renewcommand{\chapter}{\chapter\vspace{-2cm}}
-%\renewcommand{\appendixname}{\textit{Appendices}}
 
-\nocite{*}
-
-%\titleformat{\chapter}[display]   
-%{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}   
+\nocite{*} 
 
 \titlespacing*{\chapter}{0pt}{20pt}{10pt}
 
-%\titleformat{\chapter}{\fontsize{56pt}{64pt}\bfseries}{\thechapter}{0.5em}{\huge}
-%\makeatletter
-%\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
-%\makeatother
-
-%\titleformat{\chapter}{\huge\bfseries}
 \titleformat{\chapter}{\fontsize{18pt}{10pt}\bfseries}{\thechapter}{0.5em}{}
-%{}{0.5em}{\huge}
-%{}{0em}{\huge}
 \makeatletter
 \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
 \makeatother
-
-%\titleformat{\chapter}[display]{\fontsize{16pt}{10pt}\bfseries}{\thechapter}{5pt}{}
 
 \titleformat{\section}{\fontsize{16pt}{}\bfseries}{\thesection}{0.5em}{}
 
@@ -125,16 +100,8 @@
 \maketitle
 
 
-%\tableofcontents
+\tableofcontents
 \clearpage
-%\listoffigures
-%\listoftables
-
-
-
-%\begin{abstract}
-%    \import{Sections}{Abstract}
-%\end{abstract}
 
 
 
@@ -142,40 +109,21 @@
         
         \import{Sections}{Introduction}  
         
-\chapter{{Problem Sets}}
+\chapter{{Calculations}}
         
         \import{Sections}{Background Research}
-        
-%\chapter{{Materials Required}}
-        
-%        \import{Sections}{Materials Required}
-        
-%\chapter{{Procedure}}
-        
-%        \import{Sections}{Procedure}
-        
-%\chapter{{Experimental Data}}
-        
-%		\import{Sections}{Experimental Data Mod 3}
-        
-%\chapter{{Analysis}}
 
-%		\import{Sections}{Analysis}
-
-%\chapter{{Evaluation}}
+\chapter{{Graphs}}
+	
+	\import{Sections}{Graphs}     
         
-%		\import{Sections}{Evaluation}        
+\chapter{{Conclusion}}
         
-%\chapter{{Conclusion}}
-        
-%        \import{Sections}{Conclusion}
+        \import{Sections}{Conclusion}
         
 
         
 \clearpage
-
-%\import{Works Cited}{Bib Mod 1}
-
 
 \clearpage
 
@@ -183,18 +131,13 @@
 
 \appendixpage
 
-%\clearpage
+\clearpage
 
 \import{Appendix}{appdix}
 
 
 \end{document}
 
-\let\clearpage\relax
-
-\makeatletter
-\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
-\makeatother
 
 
 
