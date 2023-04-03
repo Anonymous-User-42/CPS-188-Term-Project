@@ -1394,18 +1394,43 @@ void main(void)
 			{
 				printf("Ontario\n");
 			}
-			if (i == 1)
+			if (i == 2)
 			{
 				printf("Alberta\n");
 			}
-			if (i == 1)
+			if (i == 3)
 			{
 				printf("British Columbia\n");
 			}
-			
-			
 		}
 	}
+
+	sub_spacer();
+
+	printf("Provinces with a Diabetes percentage below the National Average are:\n\n");
+
+	for (int i = 0; i < 4; i++)
+	{
+		if (ProvinceData[i] < avg_federal)
+		{
+			if (i == 0)
+			{
+				printf("Qubec\n");
+			}
+			if (i == 1)
+			{
+				printf("Ontario\n");
+			}
+			if (i == 2)
+			{
+				printf("Alberta\n");
+			}
+			if (i == 3)
+			{
+				printf("British Columbia\n");
+			}
+		}
+	}	
 
 	spacer();
 	
