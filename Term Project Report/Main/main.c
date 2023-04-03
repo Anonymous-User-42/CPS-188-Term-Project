@@ -1380,6 +1380,41 @@ void main(void)
 
 	spacer();
 
+	printf("Provinces with a Diabetes percentage above the National Average are:\n\n");
+
+	for (int i = 0; i < 4; i++)
+	{
+		if (ProvinceData[i] > avg_federal)
+		{
+			if (i == 0)
+			{
+				printf("Qubec\n");
+			}
+			if (i == 1)
+			{
+				printf("Ontario\n");
+			}
+			if (i == 1)
+			{
+				printf("Alberta\n");
+			}
+			if (i == 1)
+			{
+				printf("British Columbia\n");
+			}
+			
+			
+		}
+	}
+
+	spacer();
+	
+	/*          Question 4          */printf("|------------------------------------------------------------------------------------------Question 4------------------------------------------------------------------------------------------|\n");
+
+	spacer();
+	
+	
+
 }
 
 /*  Defining all subsequent UDF's utilized in the program   */
