@@ -1413,8 +1413,40 @@ void main(void)
 
 	spacer();
 	
-	
+	lowest = 0, highest = 0;	/*	Re-Initializing lowest & highest to 0	*/
+	l_counter = 0, h_counter = 0;	/*	Re-Initializing l_counter & h_counter to 0	*/
 
+	for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+		char add_val_y[10];
+		char stg_val_y[10];
+		strcpy(add_val_y, data_set[i].values);
+		strcpy(stg_val_y, &add_val_y[1]);
+		double values = atof(stg_val_y);
+
+		if (i == 0)
+		{
+			lowest = values;
+			l_counter = i;
+			highest = values;
+			h_counter = i;
+		}
+		else
+		{
+			if (values < lowest)
+			{
+				lowest = values;
+				l_counter = i;
+			}
+			if (values > highest)
+			{
+				highest = values;
+				h_counter = i;
+			}
+		}			
+	} printf("The Province with the highest & lowest percentage of diabetes in a year is British Columbia & Ontario in the year's %s & %s\n", data_set[h_counter].year, data_set[l_counter].year);
+
+	spacer();
 }
 
 /*  Defining all subsequent UDF's utilized in the program   */
