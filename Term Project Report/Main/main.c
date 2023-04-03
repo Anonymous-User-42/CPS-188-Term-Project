@@ -24,6 +24,7 @@ void avg_province(void);
 void avg_year(void);
 void year_avg(double f_2015, double f_2016, double f_2017, double f_2018, double f_2019, double f_2020, double f_2021, double q_2015, double q_2016, double q_2017, double q_2018, double q_2019, double q_2020, double q_2021, double o_2015, double o_2016, double o_2017, double o_2018, double o_2019, double o_2020, double o_2021, double a_2015, double a_2016, double a_2017, double a_2018, double a_2019, double a_2020, double a_2021, double b_2015, double b_2016, double b_2017, double b_2018, double b_2019, double b_2020, double b_2021);
 void avg_age(void);
+void age_avg(double f_35, double f_50, double f_65, double q_35, double q_50, double q_65, double o_35, double o_50, double o_65, double a_35, double a_50, double a_65, double b_35, double b_50, double b_65);
 
 /*  Initializing struct datatypes for CSV data  */
 
@@ -93,7 +94,7 @@ void main(void)
 
     file_c(f);  /*  Terminating File Operations */
 
-    /*          Question 1          */printf("|--------------------Question 1--------------------|\n");
+    /*          Question 1          */printf("|------------------------------------------------------------------------------------------Question 1------------------------------------------------------------------------------------------|\n");
 
 	spacer();
 	/*		Province Wise Averages		*/avg_province();
@@ -832,7 +833,7 @@ void main(void)
 				sum_2021_a += values_2021;
 			} avg_2021_a = sum_2021_a / iterator_counter_2021_a;
 		}
-		for (int j = 170; j < 212; j++)	/*	British Columbia Average Calculator	*/
+		for (int j = 170; j < 212; j++)	/*	British Columbia Year-Wise Average Calculator	*/
 		{
 			char add_val_y[10];
 			char stg_val_y[10];
@@ -948,7 +949,7 @@ void main(void)
 		}
 		
 		
-    }year_avg(avg_2015_f, avg_2016_f, avg_2017_f, avg_2018_f, avg_2019_f, avg_2020_f, avg_2021_f, avg_2015_q, avg_2016_q, avg_2017_q, avg_2018_q, avg_2019_q, avg_2020_q, avg_2021_q, avg_2015_o, avg_2016_o, avg_2017_o, avg_2018_o, avg_2019_o, avg_2020_o, avg_2021_o, avg_2015_a, avg_2016_a, avg_2017_a, avg_2018_a, avg_2019_a, avg_2020_a, avg_2021_a, avg_2015_b, avg_2016_b, avg_2017_b, avg_2018_b, avg_2019_b, avg_2020_b, avg_2021_b);
+    } year_avg(avg_2015_f, avg_2016_f, avg_2017_f, avg_2018_f, avg_2019_f, avg_2020_f, avg_2021_f, avg_2015_q, avg_2016_q, avg_2017_q, avg_2018_q, avg_2019_q, avg_2020_q, avg_2021_q, avg_2015_o, avg_2016_o, avg_2017_o, avg_2018_o, avg_2019_o, avg_2020_o, avg_2021_o, avg_2015_a, avg_2016_a, avg_2017_a, avg_2018_a, avg_2019_a, avg_2020_a, avg_2021_a, avg_2015_b, avg_2016_b, avg_2017_b, avg_2018_b, avg_2019_b, avg_2020_b, avg_2021_b);
 
 	spacer();
 
@@ -956,6 +957,356 @@ void main(void)
 
 	/*		Age-Group Wise Averages		*/avg_age();
 	spacer();
+
+	/*  Initializing Sum & Iterating Counter Variables for Age-Group Averages Calculation	*/
+
+    //  double sum_year - Variable to store the sum of the Value Data Points subsequently in every iteration
+	//	double avg_year - Variable to store the average of the Value Data Points subsequently after all iterations
+    //  iterator_counter_year - Variable to calculate the number of iterations performed in the for loop
+
+	/*	35-49 Age Group Variables	*/
+
+    double sum_35 = 0;
+	double avg_35 = 0;
+	double sum_35_f = 0;
+	double avg_35_f = 0;
+	double sum_35_q = 0;
+	double avg_35_q = 0;
+	double sum_35_o = 0;
+	double avg_35_o = 0;
+	double sum_35_a = 0;
+	double avg_35_a = 0;
+	double sum_35_b = 0;
+	double avg_35_b = 0;
+	int iterator_counter_35 = 0;
+	int iterator_counter_35_f = 0;
+	int iterator_counter_35_q = 0;
+	int iterator_counter_35_o = 0;
+	int iterator_counter_35_a = 0;
+	int iterator_counter_35_b = 0;
+
+	/*	50-65 Age Group Variables	*/
+
+	double sum_50 = 0;
+	double avg_50 = 0;
+	double sum_50_f = 0;
+	double avg_50_f = 0;
+	double sum_50_q = 0;
+	double avg_50_q = 0;
+	double sum_50_o = 0;
+	double avg_50_o = 0;
+	double sum_50_a = 0;
+	double avg_50_a = 0;
+	double sum_50_b = 0;
+	double avg_50_b = 0;
+	int iterator_counter_50 = 0;
+	int iterator_counter_50_f = 0;
+	int iterator_counter_50_q = 0;
+	int iterator_counter_50_o = 0;
+	int iterator_counter_50_a = 0;
+	int iterator_counter_50_b = 0;
+
+	/*	65+ Age Group Variables	*/
+
+	double sum_65 = 0;
+	double avg_65 = 0;
+	double sum_65_f = 0;
+	double avg_65_f = 0;
+	double sum_65_q = 0;
+	double avg_65_q = 0;
+	double sum_65_o = 0;
+	double avg_65_o = 0;
+	double sum_65_a = 0;
+	double avg_65_a = 0;
+	double sum_65_b = 0;
+	double avg_65_b = 0;
+	int iterator_counter_65 = 0;
+	int iterator_counter_65_f = 0;
+	int iterator_counter_65_q = 0;
+	int iterator_counter_65_o = 0;
+	int iterator_counter_65_a = 0;
+	int iterator_counter_65_b = 0;
+
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+		for (int j = 2; j < 44; j++)	/*	Federal Age-Group-Wise Average Calculator	*/
+		{
+			char add_val_y[10];
+			char stg_val_y[10];
+			strcpy(add_val_y, data_set[j].age_group);
+			strcpy(stg_val_y, &add_val_y[1]);
+			double age_group = atof(stg_val_y);
+			
+			if (age_group == 35)
+			{
+				iterator_counter_35_f++;
+				char add_val_2015[10];
+				char stg_val_2015[10];
+				strcpy(add_val_2015, data_set[j].values);
+				strcpy(stg_val_2015, &add_val_2015[1]);
+				double values_2015 = atof(stg_val_2015);
+				if (values_2015 == 0)
+				{
+					iterator_counter_35_f--;
+				}
+				
+				sum_35_f += values_2015;
+			} avg_35_f = sum_35_f / iterator_counter_35_f;
+			if (age_group == 50)
+			{
+				iterator_counter_50_f++;
+				char add_val_2016[10];
+				char stg_val_2016[10];
+				strcpy(add_val_2016, data_set[j].values);
+				strcpy(stg_val_2016, &add_val_2016[1]);
+				double values_2016 = atof(stg_val_2016);
+				if (values_2016 == 0)
+				{
+					iterator_counter_50_f--;
+				}
+				
+				sum_50_f += values_2016;
+			} avg_50_f = sum_50_f / iterator_counter_50_f;
+			if (age_group == 65)
+			{
+				iterator_counter_65_f++;
+				char add_val_2017[10];
+				char stg_val_2017[10];
+				strcpy(add_val_2017, data_set[j].values);
+				strcpy(stg_val_2017, &add_val_2017[1]);
+				double values_2017 = atof(stg_val_2017);
+				if (values_2017 == 0)
+				{
+					iterator_counter_65_f--;
+				}
+				
+				sum_65_f += values_2017;
+			} avg_65_f = sum_65_f / iterator_counter_65_f;
+		}
+		for (int j = 44; j < 86; j++)	/*	Quebec Age-Group-Wise Average Calculator	*/
+		{
+			char add_val_y[10];
+			char stg_val_y[10];
+			strcpy(add_val_y, data_set[j].age_group);
+			strcpy(stg_val_y, &add_val_y[1]);
+			double age_group = atof(stg_val_y);
+			
+			if (age_group == 35)
+			{
+				iterator_counter_35_q++;
+				char add_val_2015[10];
+				char stg_val_2015[10];
+				strcpy(add_val_2015, data_set[j].values);
+				strcpy(stg_val_2015, &add_val_2015[1]);
+				double values_2015 = atof(stg_val_2015);
+				if (values_2015 == 0)
+				{
+					iterator_counter_35_q--;
+				}
+				
+				sum_35_q += values_2015;
+			} avg_35_q = sum_35_q / iterator_counter_35_q;
+			if (age_group == 50)
+			{
+				iterator_counter_50_q++;
+				char add_val_2016[10];
+				char stg_val_2016[10];
+				strcpy(add_val_2016, data_set[j].values);
+				strcpy(stg_val_2016, &add_val_2016[1]);
+				double values_2016 = atof(stg_val_2016);
+				if (values_2016 == 0)
+				{
+					iterator_counter_50_q--;
+				}
+				
+				sum_50_q += values_2016;
+			} avg_50_q = sum_50_q / iterator_counter_50_q;
+			if (age_group == 65)
+			{
+				iterator_counter_65_q++;
+				char add_val_2017[10];
+				char stg_val_2017[10];
+				strcpy(add_val_2017, data_set[j].values);
+				strcpy(stg_val_2017, &add_val_2017[1]);
+				double values_2017 = atof(stg_val_2017);
+				if (values_2017 == 0)
+				{
+					iterator_counter_65_q--;
+				}
+				
+				sum_65_q += values_2017;
+			} avg_65_q = sum_65_q / iterator_counter_65_q;
+		}
+		for (int j = 86; j < 128; j++)	/*	Ontario Age-Group-Wise Average Calculator	*/
+		{
+			char add_val_y[10];
+			char stg_val_y[10];
+			strcpy(add_val_y, data_set[j].age_group);
+			strcpy(stg_val_y, &add_val_y[1]);
+			double age_group = atof(stg_val_y);
+			
+			if (age_group == 35)
+			{
+				iterator_counter_35_o++;
+				char add_val_2015[10];
+				char stg_val_2015[10];
+				strcpy(add_val_2015, data_set[j].values);
+				strcpy(stg_val_2015, &add_val_2015[1]);
+				double values_2015 = atof(stg_val_2015);
+				if (values_2015 == 0)
+				{
+					iterator_counter_35_o--;
+				}
+				
+				sum_35_o += values_2015;
+			} avg_35_o = sum_35_o / iterator_counter_35_o;
+			if (age_group == 50)
+			{
+				iterator_counter_50_o++;
+				char add_val_2016[10];
+				char stg_val_2016[10];
+				strcpy(add_val_2016, data_set[j].values);
+				strcpy(stg_val_2016, &add_val_2016[1]);
+				double values_2016 = atof(stg_val_2016);
+				if (values_2016 == 0)
+				{
+					iterator_counter_50_o--;
+				}
+				
+				sum_50_o += values_2016;
+			} avg_50_o = sum_50_o / iterator_counter_50_o;
+			if (age_group == 65)
+			{
+				iterator_counter_65_o++;
+				char add_val_2017[10];
+				char stg_val_2017[10];
+				strcpy(add_val_2017, data_set[j].values);
+				strcpy(stg_val_2017, &add_val_2017[1]);
+				double values_2017 = atof(stg_val_2017);
+				if (values_2017 == 0)
+				{
+					iterator_counter_65_o--;
+				}
+				
+				sum_65_o += values_2017;
+			} avg_65_o = sum_65_o / iterator_counter_65_o;
+		}
+		for (int j = 128; j < 170; j++)	/*	Alberta Age-Group-Wise Average Calculator	*/
+		{
+			char add_val_y[10];
+			char stg_val_y[10];
+			strcpy(add_val_y, data_set[j].age_group);
+			strcpy(stg_val_y, &add_val_y[1]);
+			double age_group = atof(stg_val_y);
+			
+			if (age_group == 35)
+			{
+				iterator_counter_35_a++;
+				char add_val_2015[10];
+				char stg_val_2015[10];
+				strcpy(add_val_2015, data_set[j].values);
+				strcpy(stg_val_2015, &add_val_2015[1]);
+				double values_2015 = atof(stg_val_2015);
+				if (values_2015 == 0)
+				{
+					iterator_counter_35_a--;
+				}
+				
+				sum_35_a += values_2015;
+			} avg_35_a = sum_35_a / iterator_counter_35_a;
+			if (age_group == 50)
+			{
+				iterator_counter_50_a++;
+				char add_val_2016[10];
+				char stg_val_2016[10];
+				strcpy(add_val_2016, data_set[j].values);
+				strcpy(stg_val_2016, &add_val_2016[1]);
+				double values_2016 = atof(stg_val_2016);
+				if (values_2016 == 0)
+				{
+					iterator_counter_50_a--;
+				}
+				
+				sum_50_a += values_2016;
+			} avg_50_a = sum_50_a / iterator_counter_50_a;
+			if (age_group == 65)
+			{
+				iterator_counter_65_a++;
+				char add_val_2017[10];
+				char stg_val_2017[10];
+				strcpy(add_val_2017, data_set[j].values);
+				strcpy(stg_val_2017, &add_val_2017[1]);
+				double values_2017 = atof(stg_val_2017);
+				if (values_2017 == 0)
+				{
+					iterator_counter_65_a--;
+				}
+				
+				sum_65_a += values_2017;
+			} avg_65_a = sum_65_a / iterator_counter_65_a;
+		}
+		for (int j = 170; j < 212; j++)	/*	British Columbia Age-Group-Wise Average Calculator	*/
+		{
+			char add_val_y[10];
+			char stg_val_y[10];
+			strcpy(add_val_y, data_set[j].age_group);
+			strcpy(stg_val_y, &add_val_y[1]);
+			double age_group = atof(stg_val_y);
+			
+			if (age_group == 35)
+			{
+				iterator_counter_35_b++;
+				char add_val_2015[10];
+				char stg_val_2015[10];
+				strcpy(add_val_2015, data_set[j].values);
+				strcpy(stg_val_2015, &add_val_2015[1]);
+				double values_2015 = atof(stg_val_2015);
+				if (values_2015 == 0)
+				{
+					iterator_counter_35_b--;
+				}
+				
+				sum_35_b += values_2015;
+			} avg_35_b = sum_35_b / iterator_counter_35_b;
+			if (age_group == 50)
+			{
+				iterator_counter_50_b++;
+				char add_val_2016[10];
+				char stg_val_2016[10];
+				strcpy(add_val_2016, data_set[j].values);
+				strcpy(stg_val_2016, &add_val_2016[1]);
+				double values_2016 = atof(stg_val_2016);
+				if (values_2016 == 0)
+				{
+					iterator_counter_50_b--;
+				}
+				
+				sum_50_b += values_2016;
+			} avg_50_b = sum_50_b / iterator_counter_50_b;
+			if (age_group == 65)
+			{
+				iterator_counter_65_b++;
+				char add_val_2017[10];
+				char stg_val_2017[10];
+				strcpy(add_val_2017, data_set[j].values);
+				strcpy(stg_val_2017, &add_val_2017[1]);
+				double values_2017 = atof(stg_val_2017);
+				if (values_2017 == 0)
+				{
+					iterator_counter_65_b--;
+				}
+				
+				sum_65_b += values_2017;
+			} avg_65_b = sum_65_b / iterator_counter_65_b;
+		}
+    } age_avg(avg_35_f, avg_50_f, avg_65_f, avg_35_q, avg_50_q, avg_65_q, avg_35_o, avg_50_o, avg_65_o, avg_35_a, avg_50_a, avg_65_a, avg_35_b, avg_50_b, avg_65_b);
+
+	spacer();
+
+	/*          Question 2          */printf("|------------------------------------------------------------------------------------------Question 2------------------------------------------------------------------------------------------|\n");
+
+	spacer();
+
 
 }
 
@@ -1031,18 +1382,28 @@ void avg_year(void)	/*	UDF for Year-Wise Averages Header	*/
 
 void year_avg(double f_2015, double f_2016, double f_2017, double f_2018, double f_2019, double f_2020, double f_2021, double q_2015, double q_2016, double q_2017, double q_2018, double q_2019, double q_2020, double q_2021, double o_2015, double o_2016, double o_2017, double o_2018, double o_2019, double o_2020, double o_2021, double a_2015, double a_2016, double a_2017, double a_2018, double a_2019, double a_2020, double a_2021, double b_2015, double b_2016, double b_2017, double b_2018, double b_2019, double b_2020, double b_2021)	/*	UDF to print Year-Wise Averages in a tabular form	*/
 {
-	printf("|Year	|		Canada		|		Quebec		|		Ontario		|		Alberta		|		British Columbia		|\n");
-	printf("|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n");
-	printf("|2015	|		%.3lf		|		%.3lf		|		%.3lf		|		%.3lf		|			%.3lf			|\n", f_2015, q_2015, o_2015, a_2015, b_2015);
-	printf("|2016	|		%.3lf		|		%.3lf		|		%.3lf		|		%.3lf		|			%.3lf			|\n", f_2016, q_2016, o_2016, a_2016, b_2016);
-	printf("|2017	|		%.3lf		|		%.3lf		|		%.3lf		|		%.3lf		|			%.3lf			|\n", f_2017, q_2017, o_2017, a_2017, b_2017);
-	printf("|2018	|		%.3lf		|		%.3lf		|		%.3lf		|		%.3lf		|			%.3lf			|\n", f_2018, q_2018, o_2018, a_2018, b_2018);
-	printf("|2019	|		%.3lf		|		%.3lf		|		%.3lf		|		%.3lf		|			%.3lf			|\n", f_2019, q_2019, o_2019, a_2019, b_2019);
-	printf("|2020	|		%.3lf		|		%.3lf		|		%.3lf		|		%.3lf		|			%.3lf			|\n", f_2020, q_2020, o_2020, a_2020, b_2020);
-	printf("|2021	|		%.3lf		|		%.3lf		|		%.3lf		|		%.3lf		|			%.3lf			|\n", f_2021, q_2021, o_2021, a_2021, b_2021);
+	printf("|	Year	|		Canada		|		Quebec		|		Ontario		|		Alberta		|		British Columbia		|\n");
+	printf("|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n");
+	printf("|	2015	|		%.3lf		|		%.3lf		|		%.3lf		|		%.3lf		|			%.3lf			|\n", f_2015, q_2015, o_2015, a_2015, b_2015);
+	printf("|	2016	|		%.3lf		|		%.3lf		|		%.3lf		|		%.3lf		|			%.3lf			|\n", f_2016, q_2016, o_2016, a_2016, b_2016);
+	printf("|	2017	|		%.3lf		|		%.3lf		|		%.3lf		|		%.3lf		|			%.3lf			|\n", f_2017, q_2017, o_2017, a_2017, b_2017);
+	printf("|	2018	|		%.3lf		|		%.3lf		|		%.3lf		|		%.3lf		|			%.3lf			|\n", f_2018, q_2018, o_2018, a_2018, b_2018);
+	printf("|	2019	|		%.3lf		|		%.3lf		|		%.3lf		|		%.3lf		|			%.3lf			|\n", f_2019, q_2019, o_2019, a_2019, b_2019);
+	printf("|	2020	|		%.3lf		|		%.3lf		|		%.3lf		|		%.3lf		|			%.3lf			|\n", f_2020, q_2020, o_2020, a_2020, b_2020);
+	printf("|	2021	|		%.3lf		|		%.3lf		|		%.3lf		|		%.3lf		|			%.3lf			|\n", f_2021, q_2021, o_2021, a_2021, b_2021);
 }
 
 void avg_age(void)	/*	UDF for Age-Group-Wise Averages Header	*/
 {
 	printf("|--------------------Age-Group-Wise Averages--------------------|\n");
 }
+
+void age_avg(double f_35, double f_50, double f_65, double q_35, double q_50, double q_65, double o_35, double o_50, double o_65, double a_35, double a_50, double a_65, double b_35, double b_50, double b_65)	/*	UDF to print Age-Group-Wise Averages in a tabular form	*/
+{
+	printf("| Age-Group	|		Canada		|		Quebec		|		Ontario		|		Alberta		|		British Columbia		|\n");
+	printf("|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n");
+	printf("|	35-49	|		%.3lf		|		%.3lf		|		%.3lf		|		%.3lf		|			%.3lf			|\n", f_35, q_35, o_35, a_35, b_35);
+	printf("|	50-64	|		%.3lf		|		%.3lf		|		%.3lf		|		%.3lf		|			%.3lf			|\n", f_50, q_50, o_50, a_50, b_50);
+	printf("|	65+	|		%.3lf		|		%.3lf		|		%.3lf		|		%.3lf		|			%.3lf			|\n", f_65, q_65, o_65, a_65, b_65);
+}
+

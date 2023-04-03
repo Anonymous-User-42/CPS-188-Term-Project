@@ -104,11 +104,12 @@ void main(void) {
     {
 		char tok2[10];
 		char tok3[10];
-		strcpy(tok2, data_set[i].year);
-      	strcpy(tok3, &tok2[1]);
-      	double year = atof(tok3);
+		strcpy(tok2, data_set[i].age_group);
+		strcpy(tok3, &tok2[1]);
+      	//strcpy(tok3, &tok2[1]);
+		double year1 = atof(tok3);
 		
-		if (strcmp(data_set[i].year,"\"2015\""))
+		if (year1 == 35)
 		{
 			c_2015++;
 			char tok2[10];
@@ -123,7 +124,7 @@ void main(void) {
 			
 			sum_2015 += v;
 		}
-		if (year == 2016)
+		if (year1 == 50)
 		{
 			c_2016++;
 			char tok2[10];
@@ -138,7 +139,7 @@ void main(void) {
 			
 			sum_2016 += v;
 		}
-		if (year == 2017)
+		if (year1 == 65)
 		{
 			c_2017++;
 			char tok2[10];
@@ -153,7 +154,7 @@ void main(void) {
 			
 			sum_2017 += v;
 		}
-		if (year == 2018)
+		if (year1 == 2018)
 		{
 			c_2018++;
 			char tok2[10];
@@ -168,7 +169,7 @@ void main(void) {
 			
 			sum_2018 += v;
 		}
-		if (year == 2019)
+		if (year1 == 2019)
 		{
 			c_2019++;
 			char tok2[10];
@@ -183,7 +184,7 @@ void main(void) {
 			
 			sum_2019 += v;
 		}
-		if (year == 2020)
+		if (year1 == 2020)
 		{
 			c_2020++;
 			char tok2[10];
@@ -198,7 +199,7 @@ void main(void) {
 			
 			sum_2020 += v;
 		}
-		if (year == 2021)
+		if (year1 == 2021)
 		{
 			c_2021++;
 			char tok2[10];
